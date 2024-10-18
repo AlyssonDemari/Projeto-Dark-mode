@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Unbounded:wght@200..900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,27 +10,34 @@
 }
 
 :root{
-    --titulos:#f17300;
-    --bg:#404242;
+    --font: "Danfo", serif;
+    --font2:"Unbounded", sans-serif;
+    --titulos:#ff4706;
+    --bg:#d8d8d8;
 }
 
 .dark-mode:root{
-    --titulos:#f17300;
-    --bg:#00a1a1;
+    --titulos:#ff4706;
+    --bg:#404242;
+}
+
+body{
+    background-color: var(--bg);
 }
 
 .fa-moon{
   display: none;
 }
 
-.container-img{
-    background-color: var(--bg);
+.fa-solid{
+    padding: 5px 20px;
 }
 
 header nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    background-color: var(--titulos);
 }
 
 nav ul {
@@ -37,8 +48,28 @@ nav ul {
 nav li{
     justify-content: space-around;
     background-color: aqua;
+    text-align: center;
     padding: 10px;
     margin: 20px;
+}
+
+/** MAIN */
+
+main{
+    width: 1500px;
+    margin: auto;
+}
+
+section{
+    height: 93vh;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+h1{
+    font-family: var(--font2);
+    font-size: 40px;
 }
 
 
