@@ -7,6 +7,7 @@
     padding: 0px;
     text-decoration: none;
     list-style-type: none;
+    color: #000;
 }
 
 :root{
@@ -48,10 +49,18 @@ nav ul {
 
 nav li{
     justify-content: space-around;
-    background-color: aqua;
     text-align: center;
     padding: 10px;
     margin: 20px;
+}
+
+header img{
+    width: 8%;
+    height: 5%;
+}
+
+.logo{
+    display: flex;
 }
 
 header h1{
@@ -78,6 +87,31 @@ h1{
     font-size: 40px;
 }
 
+p{
+    width: 700px;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--titulos);
+    color: var(--bg);
+}
+
+.redes i{
+    margin: 20px;
+    font-size: 30px;
+}
+
 
 
 
@@ -102,8 +136,8 @@ h1{
 
 
 img{
-    width: 670px;
-    height: 600px;
+    width: 470px;
+    height: 500px;
     transition: 1.5s;
 }
 
@@ -112,9 +146,14 @@ img{
     transition: 1.5s;
 }
 
+.container-img img:nth-child(1){
+    width: 500px;
+    height: 600px;
+}
+
 .container-img img:nth-child(2){
     position: absolute;
-    top: -30px;
+    top: 80px;
     left: -90px;
 }
 
