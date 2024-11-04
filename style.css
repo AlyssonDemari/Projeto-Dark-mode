@@ -8,22 +8,32 @@
     text-decoration: none;
     list-style-type: none;
     color: #000;
+    transition: 0.8s;
 }
 
 :root{
     --font: "Danfo", serif;
     --font2:"Unbounded", sans-serif;
-    --titulos:#ff4706;
     --bg:#d8d8d8;
+    --nav: #fff8dc;
+    --botoes:#ff4706;
+    --btn-hover: #f78054;
+    --textos: #000000;
+    --sombra:#000000;
 }
 
 .dark-mode:root{
-    --titulos:#ff4706;
-    --bg:#404242;
+    --bg:#282825;
+    --textos: #d8d8d8;
+    --sombra:#FFF;
 }
 
 body{
     background-color: var(--bg);
+}
+
+body h1, p{
+    color: var(--textos);
 }
 
 .fa-moon{
@@ -38,34 +48,45 @@ header nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--titulos);
+    background-color: var(--botoes);
     font-family: var(--font2);
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 nav li{
     justify-content: space-around;
-    text-align: center;
+    align-items: center;
     padding: 10px;
     margin: 20px;
+    color: var(--nav);
 }
 
-header img{
-    width: 8%;
-    height: 5%;
+nav li:hover{
+    background-color:var(--nav);
+    border-radius: 10px 30px;
+    padding: 10px;
+    color: black;
+    transition: 0.5s;
 }
 
-.logo{
-    display: flex;
-}
 
 header h1{
-    font-family: var(--font);
-    font-size: 60px;
+    font-family: var(--font2nt);
+    font-size: 40px;
+    color: var(--nav);
+}
+
+header i{
+    color: var(--nav);
+}
+header i:hover{
+    color: black;
+    transition: 0.5s;
 }
 
 /** MAIN */
@@ -76,7 +97,7 @@ main{
 }
 
 section{
-    height: 93vh;
+    height: 90vh;
     display: flex;
     margin: auto;
     align-items: center;
@@ -93,6 +114,10 @@ p{
     margin: 20px 0px;
 }
 
+i{
+    color: var(--textos);
+}
+
 .redes{
     display: flex;
     align-items: center;
@@ -103,37 +128,21 @@ button{
     padding: 10px;
     border-radius: 10px;
     border: none;
-    background-color: var(--titulos);
+    background-color: var(--botoes);
     color: var(--bg);
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color:var(--btn-hover);
+    color: #000;
+    transition: 0.5s;
 }
 
 .redes i{
     margin: 20px;
     font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 img{
     width: 470px;
@@ -158,13 +167,20 @@ img{
 }
 
 .container-img:hover img:nth-child(1){
-    transform: translateY(-50px) translateX(50px); 
+    transform: translateY(50px) translateX(50px); 
     transition: 1.5s;
-    filter: drop-shadow(-10px 10px 10px #ffffff);
-    border: 2px solid black;
+    filter: drop-shadow(-10px 10px 10px var(--sombra));
 }
 .container-img:hover img:nth-child(2){
-    transform: translateY(50px); 
+    transform: translateY(-50px); 
     transition: 1.5s;
-    border: 2px solid black;
+    filter: drop-shadow(-10px 0px 15px var(--sombra));
+}
+
+/*  Celulares menores  */
+@media (min-width: 360px) and (max-width: 767.98px){
+    body{
+        background-color: #ff00ff;
+    }
+    
 }
