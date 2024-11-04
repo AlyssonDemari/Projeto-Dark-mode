@@ -74,7 +74,6 @@ nav li:hover{
     transition: 0.5s;
 }
 
-
 header h1{
     font-family: var(--font2nt);
     font-size: 40px;
@@ -88,6 +87,19 @@ header i:hover{
     color: black;
     transition: 0.5s;
 }
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+ }
 
 /** MAIN */
 
@@ -179,8 +191,212 @@ img{
 
 /*  Celulares menores  */
 @media (min-width: 360px) and (max-width: 767.98px){
-    body{
-        background-color: #ff00ff;
+    .nav-list {
+        position: absolute;
+        top: 7vh;
+        right: 0;
+        width: 50vw;
+        height: 93vh;
+        background: var(--botoes);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 3;
+     }
+     .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+     }
+     .mobile-menu {
+        display: block;
+     }
+
+     .nav-list.active {
+        transform: translateX(0);
+     }
+      
+     .nav-list li:last-child {
+        order: -1;
+    }
+     @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+     }
+      
+     .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+     }
+      
+     .mobile-menu.active .line2 {
+        opacity: 0;
+     }
+      
+     .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+     }
+
+     nav{
+        padding: 20px 0px;
+     }
+
+     header h1{
+        font-size: 35px;
+    }
+
+    /** main */
+    main{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin: 80px 0px;
     }
     
+    section{
+        height:90vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-family: var(--font2);
+        font-size: 20px;
+        width: 350px;
+    }
+    
+    p{
+        width: 300px;
+        font-size: 18px;
+        margin: 20px 0px;
+        text-align: justify;
+    }
+    
+    i{
+        color: var(--textos);
+    }
+    
+    .redes{
+        display: flex;
+        align-items: center;
+    }
+    
+    button{
+        font-size: 14px;
+    }
+
+    
+    .redes i{
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    /** IMAGEM*/
+
+    img{
+        width: 270px;
+        height: 200px;
+        transition: 1.5s;
+    }
+    
+    .container-img img:nth-child(1){
+        width: 300px;
+        height: 300px;
+    }
+    
+    .container-img img:nth-child(2){
+        left: -30px;
+    }
+
+}
+/*  tablets  e alguns celulares  */
+@media (min-width:768px) and (max-width: 991.98px){
+ .nav-list {
+    position: absolute;
+    top: 7vh;
+    right: 0;
+    width: 50vw;
+    height: 98vh;
+    background: var(--botoes);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 3;
+ }
+
+ nav{
+    padding: 20px 0px;
+ }
+ .nav-list li {
+    opacity: 0;
+ }
+
+ .nav-list li:last-child {
+    order: -1;
+    margin: 0px;
+}
+
+ .mobile-menu {
+    display: block;
+ }
+
+  
+ .nav-list.active {
+    transform: translateX(0);
+ }
+  
+ @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+ }
+  
+ .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+ }
+  
+ .mobile-menu.active .line2 {
+    opacity: 0;
+ }
+  
+ .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+ }
+
+ main{
+    width: 50vw;
+    margin: auto;
+ }
+
+ section{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin:100px  auto;
+    align-items: center;
+ }
+
+ .container-img img:nth-child(1){
+    width: 300px;
+    height: 400px;
+ }
+
+ .container-img img:nth-child(2){
+    width: 300px;
+    height: 400px;
+ }
 }
