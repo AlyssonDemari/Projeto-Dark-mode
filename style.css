@@ -191,6 +191,9 @@ img{
 
 /*  Celulares menores  */
 @media (min-width: 360px) and (max-width: 767.98px){
+    body{
+        overflow-x: hidden;
+     }
     .nav-list {
         position: absolute;
         top: 7vh;
@@ -318,6 +321,10 @@ img{
 }
 /*  tablets  e alguns celulares  */
 @media (min-width:768px) and (max-width: 991.98px){
+ 
+ body{
+    overflow-x: hidden;
+ }
  .nav-list {
     position: absolute;
     top: 7vh;
